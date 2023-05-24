@@ -269,30 +269,47 @@ const courses = [
 ]
 
 function eventsFunk() {
+    const f = "DD/MM/YYYY"
     // const events = () => {
     let arr = []
     let id = 0
     const dt = "Course"
-    for (let index = 0; index < 3; index++) {
-        // const element = array[index];
+    const d = [
+        { start: moment("02/05/2023", f), end: moment("05/05/2023", f) },
+        { start: moment("08/05/2023", f), end: moment("12/05/2023", f) },
+        { start: moment("15/05/2023", f), end: moment("17/05/2023", f) },
+        { start: moment("22/05/2023", f), end: moment("28/05/2023", f) },
+        { start: moment("01/06/2023", f), end: moment("7/06/2023", f) },
+    ]
+    d.forEach(e => {
         const title = dt
-        const days = Math.floor(Math.random() * (5 - 1 + 1) + 1) // Math.floor(Math.random() * (max - min + 1) + min)
-        const start = moment(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))//moment().add(-days, 'days')
-        const end = start.add(2, 'days')
+        // const days = Math.floor(Math.random() * (5 - 1 + 1) + 1) // Math.floor(Math.random() * (max - min + 1) + min)
+        // const start = moment().add(index, 'days')//moment(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))//moment().add(-days, 'days')
+        // const end = start.add(1, 'days')
         const category = 1
-        const event = { id: ++id, title, start, end, category }
+        const event = { id: ++id, title, start: e.start, end: e.end, category }
         arr.push(event)
-    }
-    for (let index = 0; index < 3; index++) {
-        // const element = array[index];
-        const title = "Diary"
-        const days = Math.floor(Math.random() * (5 - 1 + 1) + 1) // Math.floor(Math.random() * (max - min + 1) + min)
-        const start = moment(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))//moment().add(-days, 'days')
-        const end = start.add(1, 'days')
-        const category = 0
-        const event = { id: ++id, title, start, end, category }
-        arr.push(event)
-    }
+    });
+    // for (let index = 0; index < 10; index++) {
+    //     // const element = array[index];
+    //     const title = dt
+    //     const days = Math.floor(Math.random() * (5 - 1 + 1) + 1) // Math.floor(Math.random() * (max - min + 1) + min)
+    //     const start = moment().add(index, 'days')//moment(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))//moment().add(-days, 'days')
+    //     const end = start.add(1, 'days')
+    //     const category = 1
+    //     const event = { id: ++id, title, start, end, category }
+    //     arr.push(event)
+    // }
+    // for (let index = 0; index < 3; index++) {
+    //     // const element = array[index];
+    //     const title = "Diary"
+    //     const days = Math.floor(Math.random() * (5 - 1 + 1) + 1) // Math.floor(Math.random() * (max - min + 1) + min)
+    //     const start = moment(new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)))//moment().add(-days, 'days')
+    //     const end = start.add(1, 'days')
+    //     const category = 0
+    //     const event = { id: ++id, title, start, end, category }
+    //     arr.push(event)
+    // }
     return arr
 }
 const events = eventsFunk()
@@ -355,11 +372,59 @@ const motivationalMessages = [
     { id: '4', text: 'No matter which field of work you want to go in, it is of great importance to learn at least one programming language. ― Ram Ray' },
 ]
 
+const usersReports = [
+    {
+        id: '1', name: "Anna Bremen", progress: 2, courses: [
+            { id: '1', start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: '2', start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 0, mark: "8" },
+        ]
+    },
+    {
+        id: '2', name: "Eric Paulov", progress: 4, courses: [
+            { id: '1', start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: '2', start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
+            { id: '3', start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
+        ]
+    },
+]
+const coursesReports = [
+    {
+        id: '1', users: [
+            { id: '1', name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
+            { id: '3', name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
+        ],
+    },
+    {
+        id: '2', users: [
+            { id: '1', name: "Pete Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "8" },
+            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 2, mark: "7" },
+            { id: '3', name: "Renne Pike", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 1, mark: "6" },
+        ],
+    },
+    {
+        id: '3', users: [
+            { id: '1', name: "Mark Flower", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "4" },
+            { id: '2', name: "Anna Demo", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 1, mark: "6" },
+            { id: '3', name: "Timmy Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 0, mark: "8" },
+        ],
+    },
+    {
+        id: '4', users: [
+            { id: '1', name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
+            { id: '3', name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
+        ],
+    }
+]
+
 
 export {
     courses,
     events,
     diaryItems,
     hintMessages,
-    motivationalMessages
+    motivationalMessages,
+    usersReports,
+    coursesReports
 }

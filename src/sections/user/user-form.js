@@ -22,7 +22,13 @@ export const UserForm = ({ details, onSave }) => {
         roleId: details ? details.roleId : roleTypes.user
     })
 
-    const handleChange = useCallback(
+    const handleChange = (event) => {
+        setValues((prevState) => ({
+            ...prevState,
+            [event.target.name]: event.target.value
+        }))
+    }
+    const handleChange2 = useCallback(
         (event) => {
             setValues((prevState) => ({
                 ...prevState,

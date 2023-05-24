@@ -206,7 +206,7 @@ const Page = () => {
     <>
       <Banner
         title="User list"
-        subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        subtitle="Configure users"
       // content={bannerContent}
       />
       <Box
@@ -224,9 +224,9 @@ const Page = () => {
               spacing={4}
             >
               <Stack spacing={1}>
-                <Typography variant="h4">
+                {/* <Typography variant="h4">
                   Users
-                </Typography>
+                </Typography> */}
                 {/* <Stack
                   alignItems="center"
                   direction="row"

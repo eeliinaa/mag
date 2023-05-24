@@ -17,6 +17,9 @@ import OverviewUser from 'src/sections/overview/overview-user'
 import OverviewAdmin from 'src/sections/overview/overview-admin'
 // import OverviewAdmin from 'src/sections/overview/overview-admin'
 
+import Banner from 'src/sections/banner'
+
+
 import { useAuth } from 'src/hooks/use-auth'
 import { roleTypes } from 'src/helpers/collections'
 
@@ -27,16 +30,16 @@ const Page = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Overview | JLM System
-        </title>
-      </Head>
+      <Banner
+        title="Dashboard"
+        subtitle="Event overview"
+      // content={bannerContent}
+      />
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          py: 8
+          // py: 8
         }}
       >
         <Container maxWidth="xl">
@@ -44,12 +47,12 @@ const Page = () => {
             container
             spacing={3}
           > */}
-          {auth.viewMode === roleTypes.user &&
-            <OverviewUser />
-          }
+          {/* {auth.viewMode === roleTypes.user && */}
+          <OverviewUser />
+          {/* }
           {auth.viewMode === roleTypes.mentor &&
             <OverviewAdmin />
-          }
+          } */}
           {/* <Grid
               xs={12}
               md={6}

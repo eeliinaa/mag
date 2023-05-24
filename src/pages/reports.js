@@ -24,6 +24,7 @@ import OverviewAdmin from 'src/sections/overview/overview-admin'
 
 import { useAuth } from 'src/hooks/use-auth'
 import { roleTypes } from 'src/helpers/collections'
+import { usersReports, courses, coursesReports } from 'src/utils/storage'
 
 const now = new Date()
 
@@ -42,10 +43,14 @@ const Page = () => {
     const handleReportTargetChange = useCallback(
         (event, value) => {
             console.log(value)
-            setTarget(value.props.children)
+            setTarget(value.props.value)
         },
         []
     )
+
+    //const course = courses.find(o => o.id === courseId) || courses[0]
+    const userReport = usersReports.find(o => o.id === target)// || usersReports[0]
+    const report = coursesReports.find(o => o.id === target)// || usersReports[0]
 
     const bannerContent = (
         <Card>
@@ -87,9 +92,12 @@ const Page = () => {
                                     label="Course"
                                     onChange={handleReportTargetChange}
                                 >
-                                    <MenuItem value={1}>React</MenuItem>
+                                    {/* <MenuItem value={1}>React</MenuItem>
                                     <MenuItem value={2}>DBreeze</MenuItem>
-                                    <MenuItem value={3}>React basic</MenuItem>
+                                    <MenuItem value={3}>React basic</MenuItem> */}
+                                    {courses.map((c, i) => (
+                                        <MenuItem key={i} value={c.id}>{c.title}</MenuItem>
+                                    ))}
                                 </Select>
                             </FormControl>
                         }
@@ -104,9 +112,11 @@ const Page = () => {
                                     onChange={handleReportTargetChange}
                                 // onChange={handleChange}
                                 >
-                                    <MenuItem value={1}>Anna</MenuItem>
-                                    <MenuItem value={2}>Berndon</MenuItem>
-                                    <MenuItem value={3}>Jack</MenuItem>
+                                    {usersReports.map((user, i) => (
+                                        <MenuItem key={i} value={user.id}>{user.name}</MenuItem>
+                                    ))}
+                                    {/* <MenuItem value={2}>Berndon</MenuItem>
+                                    <MenuItem value={3}>Jack</MenuItem> */}
                                 </Select>
                             </FormControl>
                         }
@@ -132,21 +142,22 @@ const Page = () => {
             >
                 <Container maxWidth="xl">
 
-                    {reportType === 2 ?
+                    {reportType === 2 &&
                         <ReportUsers
                             difference={2}
                             positive
                             sx={{ height: '100%' }}
                             value="53"
-                            name={target}
+                            userReport={userReport}
                         />
-                        :
-                        <ReportCourses
-                            difference={1}
-                            positive={true}
-                            sx={{ height: '100%' }}
-                            value="1.6k"
-                        />
+                    }
+                    {reportType === 1 && <ReportCourses
+                        difference={1}
+                        positive={true}
+                        sx={{ height: '100%' }}
+                        value="1.6k"
+                        report={report}
+                    />
                     }
 
                     {/* <>

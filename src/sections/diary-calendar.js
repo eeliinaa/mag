@@ -143,8 +143,10 @@ const DiaryCalendar = ({ content, title, subtitle, maxWidth }) => {
                         // events={this.props.events}
                         eventPropGetter={(eventStyleGetter)}
                         // onSelectEvent={(slotInfo) => this.onSelectEventHandler(slotInfo)}
-                        onSelectEvent={handleEditEvent}
-                        onSelectSlot={handleCreateEvent}
+                        
+                        // onSelectEvent={handleEditEvent}
+                        // onSelectSlot={handleCreateEvent}
+
                     // onSelectSlot={(slotInfo) => this.onSelectEventSlotHandler(slotInfo)}
                     />
                     {/* <Popup /> */}
