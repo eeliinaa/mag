@@ -93,7 +93,7 @@ const OverViewUser = ({ details }) => {
         <>
             <Head>
                 <title>
-                    Overview | JLM system
+                    Overview | ESN system
                 </title>
             </Head>
             <Box

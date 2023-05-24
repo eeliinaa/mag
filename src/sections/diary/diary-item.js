@@ -67,7 +67,7 @@ export const DiaryItem = (props) => {
                         >
                             Notes:
                         </Typography>
-                        {notes}
+                        {notes == "" ? "-" : notes}
                         <div>
                             <Rating
                                 name="read-only"

@@ -17,6 +17,7 @@ import Banner from 'src/sections/banner'
 import { applyPagination } from 'src/utils/apply-pagination'
 
 import { roleTypes } from 'src/helpers/collections'
+import { users } from 'src/utils/storage'
 
 const viewTypes = {
   list: 0,
@@ -144,10 +145,10 @@ const Page = () => {
   const [viewType, setViewType] = useState(viewTypes.list)
   const [user, setUser] = useState(undefined)
 
-  const [userArray, setUserArray] = useState(usersData)
+  // const [users, setUserArray] = useState(usersUse)
 
-  const users = useUsers(page, rowsPerPage, userArray)
-  const usersIds = useUserIds(users)
+  const usersUse = useUsers(page, rowsPerPage, users)
+  const usersIds = useUserIds(usersUse)
   const usersSelection = useSelection(usersIds)
 
   const handleAddNew = useCallback(
@@ -160,7 +161,7 @@ const Page = () => {
 
   const handleEditView = useCallback(
     (id, value) => {
-      const details = userArray.find(x => x.id === id)
+      const details = users.find(x => x.id === id)
 
       setViewType(viewTypes.form)
       setUser(details)
@@ -170,7 +171,6 @@ const Page = () => {
 
   const handleToList = useCallback(
     (event, value) => {
-      console.log("handleToList")
       setViewType(viewTypes.list)
       setUser(undefined)
     },
@@ -188,9 +188,7 @@ const Page = () => {
     (event, value) => {
       // setPage(value)
 
-      console.log(event, value)
-
-      let newUserArray = [...userArray]
+      let newUserArray = [...users]
     },
     []
   )
@@ -254,41 +252,14 @@ const Page = () => {
                   </Button>
                 </Stack> */}
               </Stack>
-              <div>
-                {viewType === viewTypes.list &&
-                  <Button
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <PlusIcon />
-                      </SvgIcon>
-                    )}
-                    variant="contained"
-                    onClick={handleAddNew}
-                  >
-                    Add
-                  </Button>
-                }
-                {viewType === viewTypes.form &&
-                  <Button
-                    startIcon={(
-                      <SvgIcon fontSize="small">
-                        <PlusIcon />
-                      </SvgIcon>
-                    )}
-                    variant="contained"
-                    onClick={handleToList}
-                  >
-                    Cancel
-                  </Button>
-                }
-              </div>
             </Stack>
             {viewType === viewTypes.list &&
               <>
                 <UserSearch />
                 <UsersTable
-                  count={userArray.length}
+                  count={users.length}
                   items={users}
+                  // items={usersUse}
                   onDeselectAll={usersSelection.handleDeselectAll}
                   onDeselectOne={usersSelection.handleDeselectOne}
                   onPageChange={handlePageChange}

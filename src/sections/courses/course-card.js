@@ -18,7 +18,6 @@ export const CourseCard = (props) => {
   }
 
   const handleOpenCourse = (id) => () => {
-    console.log('clii?', id)
     router.push('/publication?courseId='+id);
   }
 

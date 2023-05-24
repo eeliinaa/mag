@@ -33,12 +33,12 @@ const Page = () => (
                     <NotificationSettings />
                     <Stack 
                     
+                    // flexDirection={"row"}
+                    // justifyContent={"space-between"}
                     spacing={3}
-                    flexDirection={"row"}
-                    alignItems={"space-between"}
                     >
                         <Stack
-                            spacing={3}
+                            // spacing={3}
                         >
 
                             {/* <Grid
@@ -56,7 +56,7 @@ const Page = () => (
                             />
                         </Stack>
                         <Stack
-                            spacing={3}
+                            // spacing={3}
                         >
                             {/* </Grid>
                             <Grid

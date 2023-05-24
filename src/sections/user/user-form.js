@@ -42,7 +42,6 @@ export const UserForm = ({ details, onSave }) => {
         (event) => {
             event.preventDefault()
 
-            console.log(values)
             // const newUser = values
             onSave(values)
         },

@@ -71,13 +71,13 @@ const data = [
     address: {
       city: 'Madrid',
       country: 'Spain',
-      name: 'Anika Visser',
+      name: 'Samanta Rone',
       street: '4158  Hedge Street'
     },
     avatar: '/assets/avatars/avatar-anika-visser.png',
     createdAt: subDays(subHours(now, 11), 2).getTime(),
     email: 'anika.visser@devias.io',
-    name: 'Anika Visser',
+    name: 'Samanta Rone',
     phone: '908-691-3242'
   },
   {
@@ -215,7 +215,6 @@ const Page = () => {
 
   const handleToList = useCallback(
     (event, value) => {
-      console.log("handleToList")
       setViewType(viewTypes.list);
       setCustomer(undefined);
     },
@@ -240,7 +239,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Customers | JLM System
+          Customers | ESN System
         </title>
       </Head>
       <Box

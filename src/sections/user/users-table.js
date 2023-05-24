@@ -44,7 +44,7 @@ export const UsersTable = (props) => {
         <Card>
             <Scrollbar>
                 <Box sx={{ minWidth: 800 }}>
-                    <Table>
+                    <Table size="small">
                         <TableHead>
                             <TableRow>
                                 <TableCell padding="checkbox">
@@ -80,7 +80,6 @@ export const UsersTable = (props) => {
                         <TableBody>
                             {items.map((user) => {
                                 const isSelected = selected.includes(user.id)
-                                const createdAt = format(user.createdAt, 'dd/MM/yyyy')
 
                                 return (
                                     <TableRow
@@ -116,15 +115,15 @@ export const UsersTable = (props) => {
                                         </TableCell>
                                         <TableCell>
                                             <Stack
-                                                alignItems="center"
-                                                direction="row"
-                                                spacing={2}
+                                                // alignItems="center"
+                                                // direction="row"
+                                                // spacing={2}
                                             >
-                                                <Avatar src={user.avatar}>
+                                                {/* <Avatar src={user.avatar}>
                                                     {getInitials(user.name)}
-                                                </Avatar>
+                                                </Avatar> */}
                                                 <Typography variant="subtitle2">
-                                                    {user.name} {user.surname}
+                                                    {user.name}
                                                 </Typography>
                                             </Stack>
                                         </TableCell>
@@ -135,7 +134,7 @@ export const UsersTable = (props) => {
                                             {user.role}
                                         </TableCell>
                                         <TableCell>
-                                            {createdAt}
+                                            {user.createdAt}
                                         </TableCell>
                                     </TableRow>
                                 )
@@ -144,7 +143,7 @@ export const UsersTable = (props) => {
                     </Table>
                 </Box>
             </Scrollbar>
-            <TablePagination
+            {/* <TablePagination
                 component="div"
                 count={count}
                 onPageChange={onPageChange}
@@ -152,7 +151,7 @@ export const UsersTable = (props) => {
                 page={page}
                 rowsPerPage={rowsPerPage}
                 rowsPerPageOptions={[5, 10, 25]}
-            />
+            /> */}
         </Card>
     )
 }

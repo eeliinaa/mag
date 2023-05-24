@@ -2,7 +2,7 @@ import moment from 'moment'
 
 const courses = [
     {
-        id: '1',
+        id: 1,
         createdAt: '27/03/2019',
         category: "ReactJs",
         title: 'React Getting Started',
@@ -134,7 +134,7 @@ const courses = [
         ]
     },
     {
-        id: '2',
+        id: 2,
         createdAt: '31/03/2019',
         description: 'Course about ReactJS components used in our company',
         logo: '/assets/logos/logo-medium.png',
@@ -170,18 +170,18 @@ const courses = [
         }]
     },
     {
-        id: '3',
+        id: 3,
         createdAt: '03/04/2019',
-        description: 'Learn basics of DBreeze database',
+        description: 'Learn basics of database',
         logo: '/assets/logos/logo-slack.png',
-        title: 'DBreeze database',
+        title: 'Database',
         downloads: '857',
         category: "C#",
         progress: 0,
         publications: [{
             id: 1,
-            title: "DBreeze intro",
-            subtitle: "Get to know DBreeze",
+            title: "Database intro",
+            subtitle: "Get to know database",
             lessons: [
                 {
                     id: 1,
@@ -206,8 +206,8 @@ const courses = [
         },
         {
             id: 2,
-            title: "DBreeze functions",
-            subtitle: "Get to know DBreeze",
+            title: "Database functions",
+            subtitle: "Get to know database",
             lessons: [
                 {
                     id: 1,
@@ -225,14 +225,14 @@ const courses = [
             tasks: [
                 {
                     id: 1,
-                    title: "Create Your First DBreeze database",
+                    title: "Create Your First database",
                     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 }
             ]
         }]
     },
     {
-        id: '4',
+        id: 4,
         createdAt: '04/04/2019',
         description: 'Get to know JSON structure',
         logo: '/assets/logos/logo-lyft.png',
@@ -320,104 +320,132 @@ const diaryItems = [
         date: moment().weekday(1),
         rate: 5,
         task: "React basic",
-        notes: "I did a good job."
+        notes: "Introduction only"
     },
     {
         id: 2,
         date: moment().weekday(2),
         rate: 4,
         task: "React basic",
-        notes: "I did a good job again."
+        notes: "Get to know what React is"
     },
     {
         id: 3,
         date: moment().weekday(3),
         rate: 4,
         task: "React basic",
-        notes: "I did a good job again."
+        notes: ""
     },
     {
         id: 4,
         date: moment().weekday(4),
         rate: 4,
         task: "React basic",
-        notes: "I did a good job again."
+        notes: "Forst task passed"
     },
     {
         id: 5,
         date: moment().weekday(5),
         rate: 2,
         task: "React basic",
-        notes: "I did a good job again yay."
+        notes: ""
     },
 ]
 
 const hintMessages = [
     {
-        id: '1',
+        id: 1,
         text: 'Solve the problem first and then write the code. Don’t start coding without knowing what to do.'
     },
     {
-        id: '2',
+        id: 2,
         text: 'Don’t memorize code, instead understand the logic.'
     },
-    { id: '3', text: 'If you copy and paste a stack overflow solution, make sure you understand it. Learn to use Stack Overflow in a good way.' },
-    { id: '4', text: 'If you want to learn something, practice. Make examples and make them work because read about something is not enough.' },
-    { id: '5', text: 'Know how to google stuff. For this, you need to have experience and read a lot to know what to look for.' },
+    { id: 3, text: 'If you copy and paste a stack overflow solution, make sure you understand it. Learn to use Stack Overflow in a good way.' },
+    { id: 4, text: 'If you want to learn something, practice. Make examples and make them work because read about something is not enough.' },
+    { id: 5, text: 'Know how to google stuff. For this, you need to have experience and read a lot to know what to look for.' },
 ]
 const motivationalMessages = [
-    { id: '1', text: 'Rest, Rest, and Rest. The best way to solve a problem is to have a restful mind.' },
-    { id: '2', text: 'Programming is the art of algorithm design and the craft of debugging errant code. -Ellen Ullman' },
-    { id: '3', text: 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs and the Universe trying to produce bigger and better idiots. So far, the Universe is winning. ― Rick Cook ' },
-    { id: '4', text: 'No matter which field of work you want to go in, it is of great importance to learn at least one programming language. ― Ram Ray' },
+    { id: 1, text: 'Rest, Rest, and Rest. The best way to solve a problem is to have a restful mind.' },
+    { id: 2, text: 'Programming is the art of algorithm design and the craft of debugging errant code. -Ellen Ullman' },
+    { id: 3, text: 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs and the Universe trying to produce bigger and better idiots. So far, the Universe is winning. ― Rick Cook ' },
+    { id: 4, text: 'No matter which field of work you want to go in, it is of great importance to learn at least one programming language. ― Ram Ray' },
 ]
 
 const usersReports = [
     {
-        id: '1', name: "Anna Bremen", progress: 2, courses: [
-            { id: '1', start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
-            { id: '2', start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 0, mark: "8" },
+        id: 1, progress: 2, courses: [
+            { id: 1, start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 0, mark: "8" },
         ]
     },
     {
-        id: '2', name: "Eric Paulov", progress: 4, courses: [
-            { id: '1', start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
-            { id: '2', start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
-            { id: '3', start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
+        id: 2, progress: 4, courses: [
+            { id: 1, start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
+            { id: 3, start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
+        ]
+    },
+    {
+        id: 3, progress: 1, courses: [
+            { id: 1, start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
+            { id: 3, start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
+        ]
+    },
+    {
+        id: 4, progress: 6, courses: [
+            { id: 1, start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
+            { id: 3, start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
+        ]
+    },
+    {
+        id: 5, progress: 4, courses: [
+            { id: 1, start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, start: "28/01/2023", end: "20/02/2023", duration: "23 days", status: 1, mark: "6" },
+            { id: 3, start: "01/02/2023", end: "10/03/2023", duration: "32 days", status: 2, mark: "5" },
         ]
     },
 ]
 const coursesReports = [
     {
-        id: '1', users: [
-            { id: '1', name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
-            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
-            { id: '3', name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
+        id: 1, users: [
+            { id: 1, name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
+            { id: 3, name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
         ],
     },
     {
-        id: '2', users: [
-            { id: '1', name: "Pete Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "8" },
-            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 2, mark: "7" },
-            { id: '3', name: "Renne Pike", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 1, mark: "6" },
+        id: 2, users: [
+            { id: 1, name: "Pete Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "8" },
+            { id: 2, name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 2, mark: "7" },
+            { id: 3, name: "Renne Pike", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 1, mark: "6" },
         ],
     },
     {
-        id: '3', users: [
-            { id: '1', name: "Mark Flower", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "4" },
-            { id: '2', name: "Anna Demo", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 1, mark: "6" },
-            { id: '3', name: "Timmy Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 0, mark: "8" },
+        id: 3, users: [
+            { id: 1, name: "Mark Flower", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "4" },
+            { id: 2, name: "Anna Demo", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 1, mark: "6" },
+            { id: 3, name: "Timmy Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 0, mark: "8" },
         ],
     },
     {
-        id: '4', users: [
-            { id: '1', name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
-            { id: '2', name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
-            { id: '3', name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
+        id: 4, users: [
+            { id: 1, name: "Kate Willow", start: "12/01/2023", end: "25/01/2023", duration: "13 days", status: 1, mark: "7" },
+            { id: 2, name: "Lee Willow", start: "23/02/2023", end: "28/02/2023", duration: "5 days", status: 0, mark: "8" },
+            { id: 3, name: "Jack Tree", start: "02/03/2023", end: "15/03/2023", duration: "13 days", status: 2, mark: "9" },
         ],
     }
 ]
 
+const users = [
+    { id: 1, name: 'Anna Ozola', createdAt: '12/01/2023', role: "User", email: "dummy@demo.com" },
+    { id: 2, name: 'Kristaps Zīle', createdAt: '01/01/2023' , role: "User", email: "dummy@demo.com" },
+    { id: 3, name: 'Mārcis Zvērs', createdAt: '12/12/2022' , role: "User", email: "dummy@demo.com" },
+    { id: 4, name: 'Sanita Aka', createdAt: '26/01/2023' , role: "User", email: "dummy@demo.com" },
+    { id: 5, name: 'Marta Broša', createdAt: '12/02/2023' , role: "User", email: "dummy@demo.com" },
+]
 
 export {
     courses,
@@ -426,5 +454,6 @@ export {
     hintMessages,
     motivationalMessages,
     usersReports,
-    coursesReports
+    coursesReports,
+    users
 }

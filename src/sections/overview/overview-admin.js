@@ -25,7 +25,7 @@ const OverViewAdmin = ({ details }) => {
         <>
             <Head>
                 <title>
-                    Overview | JLM System
+                    Overview | ESN System
                 </title>
             </Head>
             <Box

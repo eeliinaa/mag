@@ -71,7 +71,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Login | JLM System
+          Login | ESN System
         </title>
       </Head>
       <Box

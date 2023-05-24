@@ -7,7 +7,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        404 | JLM System
+        404 | ESN System
       </title>
     </Head>
     <Box

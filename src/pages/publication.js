@@ -88,8 +88,6 @@ const Page = () => {
   const title = course.title
   const subtitle = course.subtitle
 
-  console.log('courseId', courseId)
-  console.log('course', course)
 
   const handleChange = (event, newValue) => {
     setActiveTab(newValue);
@@ -144,8 +142,6 @@ const a = "text"`;
     tasks = publications[activeStep].tasks
   }
 
-  console.log('activeStep', activeStep)
-  console.log('publications', publications)
 
   return (
     <>

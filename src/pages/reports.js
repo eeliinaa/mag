@@ -24,7 +24,7 @@ import OverviewAdmin from 'src/sections/overview/overview-admin'
 
 import { useAuth } from 'src/hooks/use-auth'
 import { roleTypes } from 'src/helpers/collections'
-import { usersReports, courses, coursesReports } from 'src/utils/storage'
+import { usersReports, courses, coursesReports, users } from 'src/utils/storage'
 
 const now = new Date()
 
@@ -42,7 +42,6 @@ const Page = () => {
     )
     const handleReportTargetChange = useCallback(
         (event, value) => {
-            console.log(value)
             setTarget(value.props.value)
         },
         []
@@ -112,7 +111,7 @@ const Page = () => {
                                     onChange={handleReportTargetChange}
                                 // onChange={handleChange}
                                 >
-                                    {usersReports.map((user, i) => (
+                                    {users.map((user, i) => (
                                         <MenuItem key={i} value={user.id}>{user.name}</MenuItem>
                                     ))}
                                     {/* <MenuItem value={2}>Berndon</MenuItem>

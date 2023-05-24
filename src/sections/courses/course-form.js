@@ -31,8 +31,6 @@ const states = [
 ];
 
 export const CourseForm = ({ details }) => {
-  console.log(details)
-
   const [values, setValues] = useState({
     name: details.name,//'Anika',
     description: details.description,//'Visser',

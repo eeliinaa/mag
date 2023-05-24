@@ -52,11 +52,11 @@ export const AccountPopover = (props) => {
           color="text.secondary"
           variant="body2"
         >
-          Anika Visser (admin)
+          Samanta Rone (admin)
         </Typography>
       </Box>
       <Divider />
-      <MenuList
+      {/* <MenuList
         disablePadding
         dense
         sx={{
@@ -69,7 +69,7 @@ export const AccountPopover = (props) => {
         <MenuItem onClick={handleSignOut}>
           Sign out
         </MenuItem>
-      </MenuList>
+      </MenuList> */}
       <Divider />
       <Box
         sx={{
@@ -80,8 +80,8 @@ export const AccountPopover = (props) => {
         <FormControlLabel
           control={
             <Switch
-              onChange={handleViewTypeChange}
-              checked={auth.viewMode === roleTypes.user}
+              // onChange={handleViewTypeChange}
+              // checked={auth.viewMode === roleTypes.user}
             />}
           label="Student view"
         />

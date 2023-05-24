@@ -42,7 +42,6 @@ const DiaryCalendar = ({ content, title, subtitle, maxWidth }) => {
     };
 
     const handleEditEvent = (event) => {
-        console.log('ēee', event)
         setActiveEvnet(event)
         setOpen(true);
     };
@@ -57,7 +56,6 @@ const DiaryCalendar = ({ content, title, subtitle, maxWidth }) => {
 
     const eventStyleGetter = (e, start, end, isSelected) => {
 
-        console.log(e)
 
         // let current_time = moment().format('YYYY MM DD');
         // let event_time = moment(e.start).format('YYYY MM DD');
@@ -75,8 +73,6 @@ const DiaryCalendar = ({ content, title, subtitle, maxWidth }) => {
     }
 
     const Toolbar = ({ onNavigate, label, date }) => {
-
-        console.log(onNavigate)
 
         return (
             <div className="calendar-toolbar">

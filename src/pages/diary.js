@@ -19,7 +19,7 @@ import { DiaryItem } from 'src/sections/diary/diary-item';
 
 import Banner from 'src/sections/banner'
 
-import { diaryItems } from 'src/utils/storage'
+import { diaryItems, users } from 'src/utils/storage'
 
 const Page = () => {
 
@@ -61,9 +61,9 @@ const Page = () => {
                                         label="Age"
                                     // onChange={\wsshandleChange}
                                     >
-                                        <MenuItem value={10}>Anna Lion</MenuItem>
-                                        <MenuItem value={20}>Tom Flower</MenuItem>
-                                        <MenuItem value={30}>Jerry Bear</MenuItem>
+                                        {users.map(u => (
+                                            <MenuItem key={u.id} value={u.id}>{u.name}</MenuItem>
+                                        ))}
                                     </Select>
                                 </FormControl>
                             </Stack>

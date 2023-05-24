@@ -7,7 +7,7 @@ import { Avatar, Card, CardContent, Stack, SvgIcon, Typography, Table, TableRow,
 import { ReportProgress } from 'src/sections/report/report-progress'
 import { SeverityPill } from 'src/components/severity-pill';
 
-import { courses } from 'src/utils/storage'
+import { courses, users } from 'src/utils/storage'
 
 const statusTextMap = {
   0: 'Not Started',
@@ -21,7 +21,9 @@ const statusMap = {
 };
 
 export const ReportUsers = (props) => {
-  const { difference, positive = false, sx, value, userReport } = props;
+  const { difference, positive = false, sx, value, userReport } = props
+
+  const user = userReport && users.find(u => u.id === userReport.id)
 
   return (
     <Stack
@@ -54,7 +56,7 @@ export const ReportUsers = (props) => {
                   color="text.secondary"
                   variant="h4"
                 >
-                  Progress of {userReport.name}
+                  Progress of {user.name}
                 </Typography>
                 <div><img className="progress-img" src={`/assets/images/progress-${userReport.progress}.png`} /></div>
               </Stack>
